@@ -1,6 +1,7 @@
-from flask import Blueprint
+from flask import Blueprint # type: ignore
 
-leaderboard = Blueprint('leaderboard', __name__)  # Define the 'leaderboard' blueprint, not a function
+
+leaderboard = Blueprint('leaderboard', __name__)  
 
 @leaderboard.route('/')
 def leaderboard_route():

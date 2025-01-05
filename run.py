@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask # type: ignore
 from routes.start import start  # Importing the 'start' blueprint from routes/start.py
 from routes.leaderboard import leaderboard  # Importing the 'leaderboard' blueprint from routes/leaderboard.py
 

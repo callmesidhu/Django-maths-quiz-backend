@@ -1,6 +1,6 @@
-from flask import Blueprint
+from flask import Blueprint  # type: ignore
 
-start = Blueprint('start', __name__)  # Define the 'start' blueprint, not a function
+start = Blueprint('start', __name__)  
 
 @start.route('/')
 def start_route():
