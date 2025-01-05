@@ -1,0 +1,49 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+*.log
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Flask specific
+instance/
+*.pot
+*.pyc
+*.pyo
+
+# mypy
+.mypy_cache/
+
+# coverage reports
+.coverage
+coverage.xml
+*.coveragerc
+
+# Flask migrations
+migrations/
+
+# Testing
+test/
+tests/
+
+# Environments
+.env
+.env.*
