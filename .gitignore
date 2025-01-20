@@ -1,49 +1,52 @@
-# Python
-*.pyc
-*.pyo
-*.pyd
+# Python cache files
 __pycache__/
-*.db
-*.sqlite3
-*.log
+*.py[cod]
+*$py.class
 
 # Virtual environment
 venv/
 env/
-ENV/
-.venv/
 
-# IDEs and editors
-.vscode/
-.idea/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-
-# Flask specific
-instance/
+# Django-specific
+*.log
 *.pot
 *.pyc
 *.pyo
+*.sqlite3
+db.sqlite3
 
-# mypy
-.mypy_cache/
+# Media and static files
+/static/
+/media/
+/*.media
+*.media/
 
-# coverage reports
-.coverage
-coverage.xml
-*.coveragerc
-
-# Flask migrations
-migrations/
-
-# Testing
-test/
-tests/
-
-# Environments
+# Environment variables
 .env
-.env.*
+
+# IDE and editor-specific
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Migrations
+**/migrations/**
+
+# Coverage and testing
+.coverage
+htmlcov/
+.tox/
+*.cover
+*.pyc
+
+# Build
+build/
+dist/
+*.egg-info/
