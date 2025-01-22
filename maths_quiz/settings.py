@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+# settings.py
+
+from .db_config import DATABASES
+
+# Ensure you keep the original DATABASES configuration if needed
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
