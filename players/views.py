@@ -3,13 +3,17 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Player
-from .serializers import PlayerSerializer
+from .serializer import PlayerSerializer
 
 @api_view(['POST'])
 def save_player(request):
     if request.method == 'POST':
-        serializer = PlayerSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        # Log the input data from the frontend
+        print("Input data from frontend:", request.data)
+        
+        # Create Player objects and serialize them
+        objPlayers = Player.objects.all()
+        serializer = PlayerSerializer(objPlayers, many=True)
+        
+        # Return the serialized data as a response
+        return Response(serializer.data, status=status.HTTP_200_OK)
