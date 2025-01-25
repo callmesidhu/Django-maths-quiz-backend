@@ -2,7 +2,6 @@ from rest_framework.decorators import api_view  # type: ignore
 from rest_framework.response import Response    # type: ignore
 from rest_framework import status # type: ignore
 from players.models import Players
-from players.serializer import PlayerSerializer        # type: ignore
 
 @api_view(['POST'])
 def updated_result(request):
