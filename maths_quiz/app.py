@@ -1,5 +1,5 @@
-from django.apps import AppConfig
-from django.db.backends.signals import connection_created
+from django.apps import AppConfig # type: ignore
+from django.db.backends.signals import connection_created # type: ignore
 import logging
 
 logger = logging.getLogger(__name__)

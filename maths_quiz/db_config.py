@@ -1,5 +1,5 @@
-from django.db.backends.signals import connection_created
-from django.dispatch import receiver
+from django.db.backends.signals import connection_created # type: ignore
+from django.dispatch import receiver # type: ignore
 import logging
 
 # Configure logging for the database connection message

@@ -1,7 +1,6 @@
 # models.py
-from django.db import models
+from django.db import models # type: ignore
 
-class Player(models.Model):
-    id = models.AutoField(primary_key=True)  # Auto-incremented ID
+class Players(models.Model):
     name = models.CharField(max_length=100)  # Name column with max length 100
 
