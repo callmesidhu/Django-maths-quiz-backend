@@ -36,8 +36,7 @@ db.sqlite3
 .DS_Store
 Thumbs.db
 
-# Migrations
-**/migrations/**
+
 
 # Coverage and testing
 .coverage

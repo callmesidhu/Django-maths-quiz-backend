@@ -1,5 +1,6 @@
-from django.db.backends.signals import connection_created # type: ignore
-from django.dispatch import receiver # type: ignore
+from decouple import config # type: ignore
+from django.db.backends.signals import connection_created  # type: ignore
+from django.dispatch import receiver  # type: ignore
 import logging
 
 # Configure logging for the database connection message
@@ -8,12 +9,12 @@ logger = logging.getLogger(__name__)
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'maths_app_db',        
-        'USER': 'root',        
-        'PASSWORD': '12345678', 
-        'HOST': '127.0.0.1',                 
-        'PORT': '3306',                       
+        'ENGINE': config('DB_ENGINE'), 
+        'NAME': config('DB_NAME'),        
+        'USER': config('DB_USER'),        
+        'PASSWORD': config('DB_PASSWORD'), 
+        'HOST': config('DB_HOST'),                  
+        'PORT': config('DB_PORT'),                    
     }
 }
 
