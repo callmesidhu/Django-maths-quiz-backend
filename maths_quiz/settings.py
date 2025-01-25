@@ -14,7 +14,7 @@ from pathlib import Path
 
 # settings.py
 
-from .db_config import DATABASES
+
 
 # Ensure you keep the original DATABASES configuration if needed
 
@@ -83,13 +83,9 @@ WSGI_APPLICATION = "maths_quiz.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+from .db_config import DATABASES
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+DATABASES = DATABASES
 
 
 # Password validation
