@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 
 # settings.py
+from decouple import config #type: ignore
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 
 
@@ -32,7 +35,6 @@ SECRET_KEY = "django-insecure-e-e8))qmogtu^blzt1rrld#o97a$ou+41+g0jf8w!2lzx5=+d#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
